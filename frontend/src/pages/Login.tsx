@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FrontEndRoutes } from "./route";
 import LoginIllustration from "../assets/login.png"; // Replace with your image path
 import Logo from "../assets/logo3.png"; // Replace with your image path
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    console.log("Login button pressed", { email, password });
+
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      navigate("/dashboard");
+    } else {
+      alert('Login failed. Please check your credentials.');
+    }
+  };
+
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-100 via-purple-200 to-purple-100 px-4 relative">
       {/* Navigation */}
@@ -60,9 +84,11 @@ export default function Login() {
 
           {/* Email */}
           <div className="mb-4">
-            <input
+          <input
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 rounded-xl bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 shadow"
             />
           </div>
@@ -72,17 +98,21 @@ export default function Login() {
             <input
               type="password"
               placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full px-4 py-3 rounded-xl bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 shadow"
             />
             <EyeOff className="absolute right-4 top-3.5 text-gray-500 w-5 h-5 cursor-pointer" />
           </div>
 
           {/* Submit */}
-          <Link to={FrontEndRoutes.Dashboard}>
-            <button className="w-full bg-indigo-900 text-white py-3 hover:cursor-pointer rounded-xl font-semibold shadow-md hover:bg-indigo-800 transition">
-              Log In
-            </button>
-          </Link>
+          <button
+        onClick={handleLogin}
+        className="w-full bg-indigo-900 text-white py-3 hover:cursor-pointer rounded-xl font-semibold shadow-md hover:bg-indigo-800 transition"
+      >
+        Log In
+      </button>
+
         </div>
       </div>
     </section>

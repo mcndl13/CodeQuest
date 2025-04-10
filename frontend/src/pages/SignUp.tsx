@@ -1,11 +1,38 @@
-import React from "react";
+import React ,{ useState } from "react";
 import { Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FrontEndRoutes } from "./route";
 import SignUpIllustration from "../assets/signup.png"; // Replace with your image
 import Logo from "../assets/logo3.png"; // Replace with your logo image
+import { useNavigate } from "react-router-dom";
+
 
 export default function SignUp() {
+  const [form, setForm] = useState({
+    firstName: "", lastName: "", email: "", password: "",
+  });
+  const navigate = useNavigate();
+
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSignUp = async () => {
+    console.log("Login button pressed", { email: form.email, password: form.password });
+
+    const res = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      navigate("/dashboard");
+      alert("Sign up successful!");
+    } else {
+      alert(data.message);
+    }
+  };
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-100 via-purple-200 to-purple-100 px-4 relative">
       {/* Navigation */}
@@ -60,6 +87,8 @@ export default function SignUp() {
           {/* First Name */}
           <div className="mb-4">
             <input
+             name="firstName" onChange={handleChange}   value={form.firstName}
+
               type="text"
               placeholder="First Name"
               className="w-full px-4 py-3 rounded-xl bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 shadow"
@@ -69,6 +98,8 @@ export default function SignUp() {
           {/* Last Name */}
           <div className="mb-4">
             <input
+            name="lastName" onChange={handleChange}   value={form.lastName}
+
               type="text"
               placeholder="Last Name"
               className="w-full px-4 py-3 rounded-xl bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 shadow"
@@ -78,6 +109,7 @@ export default function SignUp() {
           {/* Email */}
           <div className="mb-4">
             <input
+            name="email" onChange={handleChange}  value ={form.email}
               type="email"
               placeholder="Email"
               className="w-full px-4 py-3 rounded-xl bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 shadow"
@@ -87,18 +119,18 @@ export default function SignUp() {
           {/* Password */}
           <div className="mb-6 relative">
             <input
+            name="password" onChange={handleChange} value={form.password}
               type="password"
               placeholder="Password"
               className="w-full px-4 py-3 rounded-xl bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 shadow"
             />
             <Eye className="absolute right-4 top-3.5 text-gray-500 w-5 h-5 cursor-pointer" />
           </div>
-          <Link to={FrontEndRoutes.Dashboard}>
             {/* Submit */}
-            <button className="w-full bg-indigo-900 text-white py-3 rounded-xl font-semibold shadow-md hover:bg-indigo-800 transition">
+            <button onClick={handleSignUp} className="w-full bg-indigo-900 text-white py-3 rounded-xl font-semibold shadow-md hover:bg-indigo-800 transition">
               Sign Up
             </button>
-          </Link>
+       
         </div>
       </div>
     </section>
