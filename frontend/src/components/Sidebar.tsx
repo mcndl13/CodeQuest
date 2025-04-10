@@ -32,7 +32,9 @@ export default function Sidebar() {
             label="Dashboard"
             active
           />
+          <Link to="/mylearning">
           <SidebarItem icon={<Book size={20} />} label="Courses" />
+          </Link>
           <Link to="/challenge">
             <SidebarItem icon={<Calendar size={20} />} label="Challenges" />
           </Link>

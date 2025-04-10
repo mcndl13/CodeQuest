@@ -4,4 +4,5 @@ export const FrontEndRoutes = {
   Login: "/login",
   SignUp: "/signup",
   ChallengeScreen: "/challenge",
+  MyLearning: "/mylearning",
 } as const;

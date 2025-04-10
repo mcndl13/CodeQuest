@@ -7,9 +7,11 @@ import React from "react";
 import { Home } from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import ChallengeScreen from "./pages/ChallengeScreen";
+import MyLearningPage from "./pages/MyLearningPage";
 
 const App = () => {
   return (
+
     <BrowserRouter>
       <Routes>
         <Route path={FrontEndRoutes.Home} element={<Home />} />
@@ -17,6 +19,8 @@ const App = () => {
         <Route path={FrontEndRoutes.Login} element={<Login />} />
         <Route path={FrontEndRoutes.SignUp} element={<SignUp />} />
         <Route path={FrontEndRoutes.ChallengeScreen} element={<ChallengeScreen />} />
+        <Route path="/mylearning" element={<MyLearningPage />} />
+        {/* Add more routes as needed */}
       </Routes>
     </BrowserRouter>
   );
