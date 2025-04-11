@@ -33,14 +33,19 @@ export default function Sidebar() {
             active
           />
           <Link to="/mylearning">
-          <SidebarItem icon={<Book size={20} />} label="Courses" />
+            <SidebarItem icon={<Book size={20} />} label="My Learning" />
           </Link>
           <Link to="/challenge">
             <SidebarItem icon={<Calendar size={20} />} label="Challenges" />
           </Link>
           <SidebarItem icon={<Users size={20} />} label="Leaderboard" />
+          <SidebarItem icon={<BarChart2 size={20} />} label="Analytics" />
+          <SidebarItem icon={<MessageSquare size={20} />} label="Messages" />
 
           <div className="border-t border-gray-200 my-4"></div>
+
+          <SidebarItem icon={<Bell size={20} />} label="Notifications" />
+          <SidebarItem icon={<Info size={20} />} label="Support" />
         </nav>
       </div>
 
@@ -50,17 +55,19 @@ export default function Sidebar() {
           <SidebarItem icon={<LogOut size={20} />} label="Log Out" />
         </Link>
 
-        <div className="mt-6 flex items-center bg-blue-100 px-4 py-3 rounded-2xl">
-          <img
-            src="https://avatars.githubusercontent.com/u/1?v=4"
-            alt="John Doe"
-            className="w-10 h-10 rounded-full"
-          />
-          <div className="ml-3 text-sm">
-            <p className="text-gray-600">Welcome back 👋</p>
-            <p className="font-semibold text-gray-800">John Doe</p>
+        <Link to="/userprofile">
+          <div className="mt-6 flex items-center bg-blue-100 px-4 py-3 rounded-2xl hover:bg-blue-200 cursor-pointer">
+            <img
+              src="https://avatars.githubusercontent.com/u/1?v=4"
+              alt="John Doe"
+              className="w-10 h-10 rounded-full"
+            />
+            <div className="ml-3 text-sm">
+              <p className="text-gray-600">Welcome back 👋</p>
+              <p className="font-semibold text-gray-800">John Doe</p>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </aside>
   );
