@@ -9,6 +9,8 @@ import SignUp from "./pages/SignUp";
 import ChallengeScreen from "./pages/ChallengeScreen";
 import MyLearningPage from "./pages/MyLearningPage";
 import UserProfile from "./pages/userProfile";
+import LeaderboardPage from "./pages/LeaderboardPage";
+
 
 const App = () => {
   return (
@@ -22,7 +24,8 @@ const App = () => {
         <Route path={FrontEndRoutes.ChallengeScreen} element={<ChallengeScreen />} />
         <Route path="/mylearning" element={<MyLearningPage />} />
         <Route path="/userprofile" element={<UserProfile />} />
-        {/* Add more routes as needed */}
+        <Route path="/leaderboard" element={<LeaderboardPage />} />
+
       </Routes>
     </BrowserRouter>
   );

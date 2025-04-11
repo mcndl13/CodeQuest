@@ -43,11 +43,9 @@ export default function Sidebar() {
             <SidebarItem icon={<Calendar size={20} />} label="Challenges" />
           </Link>
           {/* Leaderboard Link */}
+          <Link to="/leaderboard">
           <SidebarItem icon={<Users size={20} />} label="Leaderboard" />
-          {/* Analytics Link */}
-          <SidebarItem icon={<BarChart2 size={20} />} label="Analytics" />
-          {/* Messages Link */}
-          <SidebarItem icon={<MessageSquare size={20} />} label="Messages" />
+          </Link>
 
           {/* Divider */}
           <div className="border-t border-gray-200 my-4"></div>

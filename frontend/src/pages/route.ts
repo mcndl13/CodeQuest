@@ -1,3 +1,5 @@
+import LeaderboardPage from "./LeaderboardPage";
+
 export const FrontEndRoutes = {
   Dashboard: "/dashboard",
   Home: "/",
@@ -5,4 +7,5 @@ export const FrontEndRoutes = {
   SignUp: "/signup",
   ChallengeScreen: "/challenge",
   MyLearning: "/mylearning",
+  LeaderboardPage: "/leaderboard",
 } as const;
