@@ -1,6 +1,6 @@
-# CodeQuest – SOEN 357 – Winter 2025 – Final Project
+# 💻 CodeQuest – SOEN 357 – Winter 2025 – Research Project
 
-### Team Members
+## 👨‍👩‍👧‍👦 Team Members
 
 | Name                      | Student ID |
 |---------------------------|:----------:|
@@ -11,41 +11,45 @@
 
 ---
 
-## Project Overview
+## 🌐 Project Overview
 
-**CodeQuest** is a web-based application created as part of the SOEN 357: User Interface Design course at Concordia University, Winter 2025. It aims to enhance the learning experience for software engineering students by providing interactive challenges, collaborative tools, and an intuitive interface.
+**CodeQuest** is a web-based platform built for students in **SOEN 357: User Interface Design** at **Concordia University** (Winter 2025). It’s designed to boost the learning experience for software engineering students through interactive coding challenges, intuitive collaboration tools, and a modern, responsive interface.
 
-This project emphasizes usability and user-centered design and was developed using Agile methodologies.
+Developed using **Agile methodologies**, the project emphasizes **usability**, **accessibility**, and **user-centered design**.
 
 ---
 
-## Key Features
+## ✨ Key Features
 
-- Secure user authentication with role-based access control  
-- Real-time collaborative coding challenges with instant feedback  
-- Project and assignment management tools  
-- Fully responsive design for desktop and mobile  
-- Built using:
-  - **Frontend:** React with Vite  
-  - **Backend:** Node.js with Express  
+- 🔐 **Secure Authentication**
+  - Role-based access control for students and instructors
+
+- 🤝 **Collaborative Coding**
+  - Real-time code editor with instant feedback and team support
+
+- 📂 **Project & Assignment Management**
+  - Easy organization and submission tracking
+
+- 📱 **Fully Responsive UI**
+  - Optimized for both desktop and mobile experiences
+
+- ⚙️ **Tech Stack**
+  - **Frontend:** React + Vite  
+  - **Backend:** Node.js + Express  
   - **Database:** MongoDB
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-Follow the steps below to run the application locally.
-
-### 1. Clone the Repository
+### 1. 🔁 Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/codequest.git
 cd codequest
 ```
 
-### 2. Install Dependencies
-
-Install required packages for both frontend and backend:
+### 2. 📦 Install Dependencies
 
 ```bash
 # Backend
@@ -57,9 +61,9 @@ cd ../frontend
 npm install
 ```
 
-### 3. Configure Environment Variables
+### 3. ⚙️ Configure Environment Variables
 
-In the `backend` directory, create a `.env` file with the following content:
+In the `backend` directory, create a `.env` file with:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
@@ -67,7 +71,7 @@ MONGO_URI=your_mongodb_connection_string
 
 Replace `your_mongodb_connection_string` with your actual MongoDB URI.
 
-### 4. Run the Application
+### 4. ▶️ Run the Application
 
 Start the backend server:
 
@@ -76,24 +80,22 @@ cd backend
 nodemon index.js
 ```
 
-Start the frontend development server:
+Start the frontend dev server:
 
 ```bash
 cd ../frontend
 npm run dev
 ```
 
-Access the application by visiting:
-
-```
-http://localhost:5173
-```
+Then open the app in your browser at:  
+**http://localhost:5173**
 
 ---
 
-## Additional Notes
+## 📌 Additional Notes
 
-- Ensure Node.js and npm are installed on your system.
-- The backend uses **Nodemon** for automatic server restarts during development.
+- Ensure you have **Node.js** and **npm** installed.
 
-Enjoy using **CodeQuest**!
+---
+
+Enjoy using **CodeQuest**! 🎉  
