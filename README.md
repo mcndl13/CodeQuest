@@ -22,16 +22,12 @@ Developed using **Agile methodologies**, the project emphasizes **usability**, *
 ## ✨ Key Features
 
 - 🔐 **Secure Authentication**
-  - Role-based access control for students and instructors
-
+  
 - 🤝 **Collaborative Coding**
   - Real-time code editor with instant feedback and team support
 
 - 📂 **Project & Assignment Management**
   - Easy organization and submission tracking
-
-- 📱 **Fully Responsive UI**
-  - Optimized for both desktop and mobile experiences
 
 - ⚙️ **Tech Stack**
   - **Frontend:** React + Vite  
