@@ -1,4 +1,4 @@
-# 💻 CodeQuest – SOEN 357 – Winter 2025 – Research Project
+# 💻 CodeQuest – Research Project
 
 ## 👨‍👩‍👧‍👦 Team Members
 
