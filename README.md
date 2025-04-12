@@ -31,7 +31,7 @@ Developed using **Agile methodologies**, the project emphasizes **usability**, *
 - **Project & Assignment Management**
   - Easy organization and submission tracking
 
-- ⚙**Tech Stack**
+- **Tech Stack**
   - **Frontend:** React + Vite  
   - **Backend:** Node.js + Express  
   - **Database:** MongoDB
