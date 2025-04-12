@@ -1,8 +1,8 @@
-# 💻 CodeQuest – Research Project
+# CodeQuest – Research Project
 
 https://github.com/user-attachments/assets/6e7fb96b-9391-4f74-96d7-aa7e066456c5
 
-## 👨‍👩‍👧‍👦 Team Members
+## Team Members
 
 | Name                      | Student ID |
 |---------------------------|:----------:|
@@ -13,7 +13,7 @@ https://github.com/user-attachments/assets/6e7fb96b-9391-4f74-96d7-aa7e066456c5
 
 ---
 
-## 🌐 Project Overview
+## Project Overview
 
 **CodeQuest** is a web-based platform built for students in **SOEN 357: User Interface Design** at **Concordia University** (Winter 2025). It’s designed to boost the learning experience for software engineering students through interactive coding challenges, intuitive collaboration tools, and a modern, responsive interface.
 
@@ -21,33 +21,33 @@ Developed using **Agile methodologies**, the project emphasizes **usability**, *
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- 🔐 **Secure Authentication**
+- **Secure Authentication**
   
-- 🤝 **Collaborative Coding**
+- **Collaborative Coding**
   - Real-time code editor with instant feedback and team support
 
-- 📂 **Project & Assignment Management**
+- **Project & Assignment Management**
   - Easy organization and submission tracking
 
-- ⚙️ **Tech Stack**
+- ⚙**Tech Stack**
   - **Frontend:** React + Vite  
   - **Backend:** Node.js + Express  
   - **Database:** MongoDB
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 1. 🔁 Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/codequest.git
 cd codequest
 ```
 
-### 2. 📦 Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 # Backend
@@ -59,7 +59,7 @@ cd ../frontend
 npm install
 ```
 
-### 3. ⚙️ Configure Environment Variables
+### 3. Configure Environment Variables
 
 In the `backend` directory, create a `.env` file with:
 
@@ -69,7 +69,7 @@ MONGO_URI=your_mongodb_connection_string
 
 Replace `your_mongodb_connection_string` with your actual MongoDB URI.
 
-### 4. ▶️ Run the Application
+### 4. Run the Application
 
 Start the backend server:
 
@@ -90,10 +90,8 @@ Then open the app in your browser at:
 
 ---
 
-## 📌 Additional Notes
+## Additional Notes
 
 - Ensure you have **Node.js** and **npm** installed.
 
 ---
-
-Enjoy using **CodeQuest**! 🎉  
